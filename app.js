@@ -1,4 +1,3 @@
-
 //Listen for submit
 document.getElementById('loan-form').addEventListener('submit',function(e){
    //Hide Results
@@ -11,6 +10,7 @@ setTimeout(calculateresult,2000);
 
     e.preventDefault();
 });
+
 //Calculate Results
 
 function calculateresult(e){
@@ -45,7 +45,6 @@ function calculateresult(e){
 
     
 }
-
 //Show error
 
 function showerror(error)
@@ -77,3 +76,7 @@ card.insertBefore(errordiv,heading);
 setTimeout(clearerror,2000);
 }
 
+//Clear error
+function clearerror(){
+    document.querySelector('.alert').remove();
+}
