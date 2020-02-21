@@ -45,3 +45,35 @@ function calculateresult(e){
 
     
 }
+
+//Show error
+
+function showerror(error)
+{
+//Show results
+document.getElementById('results').style.display='none';
+    
+//Hide loader
+document.getElementById('loading').style.display='none';
+
+
+// Create a div element
+let errordiv=document.createElement('div');
+
+//Get elements
+let card=document.querySelector('.card');
+let heading=document.querySelector('.heading');
+
+//Add class
+errordiv.className='alert alert-danger';
+
+//Create text node and add to div
+errordiv.appendChild(document.createTextNode(error));
+
+//Insert error above heading
+card.insertBefore(errordiv,heading);
+
+//Clear error after 2 seconds
+setTimeout(clearerror,2000);
+}
+
